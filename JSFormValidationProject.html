@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form action="#" id="form1" onsubmit="return Validate()">
+        Name : <input type="text" name="" id="name"><br><br>
+        Email : <input type="text" name="" id="email"><br><br>
+        Confirm Email : <input type="text" name="" id="cnfemail"><br><br>
+        Password :<input type="password" name="" onkeyup="ValidatePassword()" id="password"><br><br>
+        <div id="passdiv" style="display: none;"><input type="checkbox" name="" id="uppercase" value="PHP">Required a upper case letter<br>
+                  <input type="checkbox" name="" id="lowercase" value="PHP">Required a lower case letter<br>
+                  <input type="checkbox" name="" id="special" value="PHP">Required a special character<br>
+                  <input type="checkbox" name="" id="digit" value="PHP">Required a digit<br>
+                  <input type="checkbox" name="" id="minimum" value="PHP">Minimum 8 characters<br><br>
+          </div>     
+        Confirm Password :<input type="password" name="" id="cnfpassword"><br><br>
+        DOB :<input type="date" name="" id="dob"><br><br>
+        Gender:<input type="radio" name="gender" onclick="Gender()" value="Male">Male
+               <input type="radio" name="gender" onclick="Gender()" value="Female">Female
+               <input type="radio" name="gender" onclick="Gender()" value="Other">Other<br><br>
+        Course:<input type="checkbox" name="course" onclick="Course()" value="PHP">PHP
+               <input type="checkbox" name="course" onclick="Course()" value="JS">JS
+               <input type="checkbox" name="course" onclick="Course()" value="Python">Python
+               <input type="checkbox" name="course" onclick="Course()" value="Java">Java<br><br>
+        Country :<select name="" id="country" form="form1" onchange="getState(this)"></select>
+        State :<select name="" id="state" onchange="getCity(this)"></select>
+        City :<select name="" id="city"></select><br><br>
+        Image :<input type="file" id="myfile" accept="image/jpg,image/jpeg,image/png"><br><br>
+        <div id="captcha"></div>
+                  <input type="text" placeholder="Enter above text" id="captcha2"><br><br>
+        <button>Submit</button>
+    </form>
+    <p id="error"> </p>
+    <script src="myscript.js"></script> 
+   
+    
+</body>
+
+</html>
